@@ -6,14 +6,13 @@ import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.unclebob.payroll.db.impl.InMemoryPayrollDatabase;
 import com.unclebob.payroll.domain.Affiliation;
@@ -48,10 +47,11 @@ import com.unclebob.payroll.transaction.impl.PaydayTransaction;
 import com.unclebob.payroll.transaction.impl.SalesReceiptTransaction;
 import com.unclebob.payroll.transaction.impl.ServiceChargeTransaction;
 import com.unclebob.payroll.transaction.impl.TimeCardTransaction;
+import org.junit.jupiter.api.BeforeEach;
 
 public class PayrollTest {
 
-	@Before
+	@BeforeEach
 	public void setup() {
 		GpayrollDatabase = new InMemoryPayrollDatabase();
 	}

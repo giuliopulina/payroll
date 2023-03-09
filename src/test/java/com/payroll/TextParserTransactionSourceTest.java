@@ -2,18 +2,17 @@ package com.payroll;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import org.junit.Test;
-
 import com.unclebob.payroll.transaction.TransactionFactory;
 import com.unclebob.payroll.transaction.source.TextParserTransactionSource;
 import com.unclebob.transaction.Transaction;
+import org.junit.jupiter.api.Test;
 
 public class TextParserTransactionSourceTest {
 
